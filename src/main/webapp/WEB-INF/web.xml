@@ -1,0 +1,52 @@
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+         version="2.4">
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+
+    <servlet>
+        <servlet-name>processTask</servlet-name>
+        <servlet-class>com.wavemaker.todo.servlets.TaskServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>processTask</servlet-name>
+        <url-pattern>/Task/*</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>processEmp</servlet-name>
+        <servlet-class>com.wavemaker.todo.servlets.EmployeeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>processEmp</servlet-name>
+        <url-pattern>/Employee/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>updateEmployee</servlet-name>
+        <jsp-file>/UserDetails.html</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>updateEmployee</servlet-name>
+        <url-pattern>/modify/*</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>addPhoto</servlet-name>
+        <servlet-class>com.wavemaker.todo.servlets.FileUploadServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addPhoto</servlet-name>
+        <url-pattern>/addPhoto/*</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>updateTask</servlet-name>
+        <jsp-file>/TaskDetails.html</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>updateTask</servlet-name>
+        <url-pattern>/modifyTask/*</url-pattern>
+    </servlet-mapping>
+
+</web-app>
